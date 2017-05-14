@@ -5,4 +5,7 @@ RUN apt-get update && apt-get install -qq -y \
 
 WORKDIR /usr/src/app/
 
+COPY Gemfile* /usr/src/app/
+RUN bundle
+
 COPY . /usr/src/app/
